@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showingRecoridng = false
+    @State private var showingConverter = false
     
     var body: some View {
         VStack {
@@ -29,7 +30,7 @@ struct ContentView: View {
         }
         
         Button("Show Converter Modal") {
-            showingRecoridng.toggle()
+            showingConverter.toggle()
         }
         .sheet(isPresented: $showingRecoridng) {
           ConverterView()

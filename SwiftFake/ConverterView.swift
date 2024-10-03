@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ConverterView: View {
+    @State var model : ConverterViewModel = ConverterViewModel()
+    
     var body: some View {
+        
+        
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Button("Test Libavformat") {
+            
+            model.testFFmpegLibavformat()
+            
+        }
+        
     }
 }
 
