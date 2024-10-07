@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import CoreAudioTypes
+
+
 
 struct ConverterView: View {
     @State var model : ConverterViewModel = ConverterViewModel()
@@ -16,8 +19,6 @@ struct ConverterView: View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         
         Button("Test Libavformat") {
-            
-            model.testFFmpegLibavformat()
             
         }
         

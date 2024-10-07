@@ -48,7 +48,8 @@ struct RecorderView : View {
             
             Button("DEBUG: File info") {
                 let url = viewModel.getFile()
-                print("path: .....\(url.lastPathComponent)")
+                print("path: \(url)")
+                
                 let exists = FileManager.default.fileExists(atPath: url.path)
                 print("exists: \(exists)")
                 if !exists { return }
