@@ -16,6 +16,9 @@
 
 @interface FFmpegWrapper : NSObject
 
-- (void)runFFmpegCommand:(NSString *)command;
++ (void)runFFmpegCommand:(NSString *)command;
++ (void) getFFmpegVersion;
+//+ (void) transcodeToPCMs161e:(NSString*)inputAudioFile;
++ (void) transcodeToPCM161eWithInput: (NSString *)inputPath output:(NSString*)outputPath;
 
 @end
