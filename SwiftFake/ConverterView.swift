@@ -18,9 +18,11 @@ struct ConverterView: View {
         
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         
-        Button("Test Libavformat") {
-            
+        Button("Click to test ffmpeg") {
+            print("Going to run fetchffmpegversion")
+            model.fetchFFmpegVersion()
         }
+        .buttonStyle(.borderedProminent)
         
     }
 }

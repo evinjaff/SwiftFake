@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C83F8CD31B4D22CEDDBCFA8 /* Pods_SwiftFake_SwiftFakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BED7A87DC9B44AF64363EEA /* Pods_SwiftFake_SwiftFakeUITests.framework */; };
+		2A68440A312D28ACFADAC2BD /* Pods_SwiftFakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C8337D12B0736908E0C123 /* Pods_SwiftFakeTests.framework */; };
+		5D4588C16188DDB38352064A /* Pods_SwiftFake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035732070BF96A8096EAD115 /* Pods_SwiftFake.framework */; };
+		F96DA4932CB4EEE5008FB892 /* FFmpegHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */; };
 		F9CB01EC2CADA7F9000D2D6E /* SwiftFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB01EB2CADA7F9000D2D6E /* SwiftFakeApp.swift */; };
 		F9CB01EE2CADA7F9000D2D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB01ED2CADA7F9000D2D6E /* ContentView.swift */; };
 		F9CB01F02CADA7FA000D2D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CB01EF2CADA7FA000D2D6E /* Assets.xcassets */; };
@@ -40,7 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F94549AA2CAF3F6F00BA6AA4 /* SwiftFake-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftFake-Bridging-Header.h"; sourceTree = "<group>"; };
+		035732070BF96A8096EAD115 /* Pods_SwiftFake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		056B3931E83A1C9CE53E4AEA /* Pods-SwiftFake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFake.debug.xcconfig"; path = "Target Support Files/Pods-SwiftFake/Pods-SwiftFake.debug.xcconfig"; sourceTree = "<group>"; };
+		11C8337D12B0736908E0C123 /* Pods_SwiftFakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BED7A87DC9B44AF64363EEA /* Pods_SwiftFake_SwiftFakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFake_SwiftFakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B1B4CA4BAAA3D282B98638 /* Pods-SwiftFakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFakeTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftFakeTests/Pods-SwiftFakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48D6BED44FB567D366989C04 /* Pods-SwiftFake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFake.release.xcconfig"; path = "Target Support Files/Pods-SwiftFake/Pods-SwiftFake.release.xcconfig"; sourceTree = "<group>"; };
+		51AB168BC5F343F7A7FBB6EC /* Pods-SwiftFakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFakeTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftFakeTests/Pods-SwiftFakeTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B7344C60CD881C97CA86005 /* Pods-SwiftFake-SwiftFakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFake-SwiftFakeUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftFake-SwiftFakeUITests/Pods-SwiftFake-SwiftFakeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8965D3B01C4A56012911762 /* Pods-SwiftFake-SwiftFakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFake-SwiftFakeUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftFake-SwiftFakeUITests/Pods-SwiftFake-SwiftFakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegHelper.m; sourceTree = "<group>"; };
+		F96DA4962CB4F4B4008FB892 /* SwiftFake-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftFake-Bridging-Header.h"; sourceTree = "<group>"; };
+		F96DA4972CB4F545008FB892 /* FFmpegHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegHelper.h; sourceTree = "<group>"; };
 		F98D3EE12CB4627B008FA11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9CB01E82CADA7F9000D2D6E /* SwiftFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CB01EB2CADA7F9000D2D6E /* SwiftFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFakeApp.swift; sourceTree = "<group>"; };
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4588C16188DDB38352064A /* Pods_SwiftFake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A68440A312D28ACFADAC2BD /* Pods_SwiftFakeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C83F8CD31B4D22CEDDBCFA8 /* Pods_SwiftFake_SwiftFakeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		084DF99404FDD93920FE4A67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				035732070BF96A8096EAD115 /* Pods_SwiftFake.framework */,
+				1BED7A87DC9B44AF64363EEA /* Pods_SwiftFake_SwiftFakeUITests.framework */,
+				11C8337D12B0736908E0C123 /* Pods_SwiftFakeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA411D6A78B317391ADEB807 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				056B3931E83A1C9CE53E4AEA /* Pods-SwiftFake.debug.xcconfig */,
+				48D6BED44FB567D366989C04 /* Pods-SwiftFake.release.xcconfig */,
+				B8965D3B01C4A56012911762 /* Pods-SwiftFake-SwiftFakeUITests.debug.xcconfig */,
+				5B7344C60CD881C97CA86005 /* Pods-SwiftFake-SwiftFakeUITests.release.xcconfig */,
+				44B1B4CA4BAAA3D282B98638 /* Pods-SwiftFakeTests.debug.xcconfig */,
+				51AB168BC5F343F7A7FBB6EC /* Pods-SwiftFakeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F9CB01DF2CADA7F9000D2D6E = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +133,8 @@
 				F9CB01FB2CADA7FB000D2D6E /* SwiftFakeTests */,
 				F9CB02052CADA7FB000D2D6E /* SwiftFakeUITests */,
 				F9CB01E92CADA7F9000D2D6E /* Products */,
+				BA411D6A78B317391ADEB807 /* Pods */,
+				084DF99404FDD93920FE4A67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +162,9 @@
 				F9CB02192CADC48A000D2D6E /* RecorderViewModel.swift */,
 				F9CB021D2CAF1C7B000D2D6E /* ConverterViewModel.swift */,
 				F9CB021F2CAF1C85000D2D6E /* ConverterView.swift */,
-				F94549AA2CAF3F6F00BA6AA4 /* SwiftFake-Bridging-Header.h */,
+				F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */,
+				F96DA4962CB4F4B4008FB892 /* SwiftFake-Bridging-Header.h */,
+				F96DA4972CB4F545008FB892 /* FFmpegHelper.h */,
 			);
 			path = SwiftFake;
 			sourceTree = "<group>";
@@ -172,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9CB020C2CADA7FB000D2D6E /* Build configuration list for PBXNativeTarget "SwiftFake" */;
 			buildPhases = (
+				0CD62F30149FFD2D151FC902 /* [CP] Check Pods Manifest.lock */,
 				F9CB01E42CADA7F9000D2D6E /* Sources */,
 				F9CB01E52CADA7F9000D2D6E /* Frameworks */,
 				F9CB01E62CADA7F9000D2D6E /* Resources */,
+				11D0AB84C764085B813F90AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9CB020F2CADA7FB000D2D6E /* Build configuration list for PBXNativeTarget "SwiftFakeTests" */;
 			buildPhases = (
+				22C2554F68ADAFF7DEFA8703 /* [CP] Check Pods Manifest.lock */,
 				F9CB01F42CADA7FB000D2D6E /* Sources */,
 				F9CB01F52CADA7FB000D2D6E /* Frameworks */,
 				F9CB01F62CADA7FB000D2D6E /* Resources */,
@@ -209,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9CB02122CADA7FB000D2D6E /* Build configuration list for PBXNativeTarget "SwiftFakeUITests" */;
 			buildPhases = (
+				D6B0D369121EBE1A2C2AD9A5 /* [CP] Check Pods Manifest.lock */,
 				F9CB01FE2CADA7FB000D2D6E /* Sources */,
 				F9CB01FF2CADA7FB000D2D6E /* Frameworks */,
 				F9CB02002CADA7FB000D2D6E /* Resources */,
+				592238343F479C02CA4F1956 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +345,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CD62F30149FFD2D151FC902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftFake-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11D0AB84C764085B813F90AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFake/Pods-SwiftFake-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFake/Pods-SwiftFake-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftFake/Pods-SwiftFake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22C2554F68ADAFF7DEFA8703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftFakeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		592238343F479C02CA4F1956 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFake-SwiftFakeUITests/Pods-SwiftFake-SwiftFakeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftFake-SwiftFakeUITests/Pods-SwiftFake-SwiftFakeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftFake-SwiftFakeUITests/Pods-SwiftFake-SwiftFakeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B0D369121EBE1A2C2AD9A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftFake-SwiftFakeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9CB01E42CADA7F9000D2D6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,6 +459,7 @@
 				F9CB02202CAF1C85000D2D6E /* ConverterView.swift in Sources */,
 				F9CB01EE2CADA7F9000D2D6E /* ContentView.swift in Sources */,
 				F9CB022D2CAF276F000D2D6E /* RTVC.mlpackage in Sources */,
+				F96DA4932CB4EEE5008FB892 /* FFmpegHelper.m in Sources */,
 				F9CB01EC2CADA7F9000D2D6E /* SwiftFakeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +618,7 @@
 		};
 		F9CB020D2CADA7FB000D2D6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 056B3931E83A1C9CE53E4AEA /* Pods-SwiftFake.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -473,12 +628,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftFake/Preview Content\"";
 				DEVELOPMENT_TEAM = 5P858WB2T8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SwiftFake/Ffmpeg/include/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftFake/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To Record Audio for deepfake";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -490,13 +646,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/swift",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = starkomon.SwiftFake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -508,6 +661,7 @@
 		};
 		F9CB020E2CADA7FB000D2D6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D6BED44FB567D366989C04 /* Pods-SwiftFake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,11 +670,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftFake/Preview Content\"";
 				DEVELOPMENT_TEAM = 5P858WB2T8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SwiftFake/Ffmpeg/include/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftFake/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To Record Audio for deepfake";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -532,13 +687,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/swift",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = starkomon.SwiftFake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -550,6 +702,7 @@
 		};
 		F9CB02102CADA7FB000D2D6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B1B4CA4BAAA3D282B98638 /* Pods-SwiftFakeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -569,6 +722,7 @@
 		};
 		F9CB02112CADA7FB000D2D6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51AB168BC5F343F7A7FBB6EC /* Pods-SwiftFakeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +742,7 @@
 		};
 		F9CB02132CADA7FB000D2D6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8965D3B01C4A56012911762 /* Pods-SwiftFake-SwiftFakeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +760,7 @@
 		};
 		F9CB02142CADA7FB000D2D6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7344C60CD881C97CA86005 /* Pods-SwiftFake-SwiftFakeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

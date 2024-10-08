@@ -32,7 +32,7 @@ struct ContentView: View {
         Button("Show Converter Modal") {
             showingConverter.toggle()
         }
-        .sheet(isPresented: $showingRecoridng) {
+        .sheet(isPresented: $showingConverter) {
           ConverterView()
         }
         
