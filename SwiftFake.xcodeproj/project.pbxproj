@@ -23,7 +23,6 @@
 		F9CB021E2CAF1C7B000D2D6E /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB021D2CAF1C7B000D2D6E /* ConverterViewModel.swift */; };
 		F9CB02202CAF1C85000D2D6E /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB021F2CAF1C85000D2D6E /* ConverterView.swift */; };
 		F9CB022D2CAF276F000D2D6E /* RTVC.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = F9CB022C2CAF276F000D2D6E /* RTVC.mlpackage */; };
-		F9CB022F2CAF30A4000D2D6E /* Ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9CB022E2CAF30A4000D2D6E /* Ffmpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		F9CB021D2CAF1C7B000D2D6E /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
 		F9CB021F2CAF1C85000D2D6E /* ConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 		F9CB022C2CAF276F000D2D6E /* RTVC.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTVC.mlpackage; sourceTree = "<group>"; };
-		F9CB022E2CAF30A4000D2D6E /* Ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ffmpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				F98D3EE12CB4627B008FA11A /* Info.plist */,
-				F9CB022E2CAF30A4000D2D6E /* Ffmpeg */,
 				F9CB022A2CAF274C000D2D6E /* Support */,
 				F9CB01EB2CADA7F9000D2D6E /* SwiftFakeApp.swift */,
 				F9CB01ED2CADA7F9000D2D6E /* ContentView.swift */,
@@ -325,7 +322,6 @@
 			files = (
 				F9CB01F32CADA7FA000D2D6E /* Preview Assets.xcassets in Resources */,
 				F9CB01F02CADA7FA000D2D6E /* Assets.xcassets in Resources */,
-				F9CB022F2CAF30A4000D2D6E /* Ffmpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
