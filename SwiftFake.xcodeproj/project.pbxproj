@@ -11,6 +11,8 @@
 		2A68440A312D28ACFADAC2BD /* Pods_SwiftFakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C8337D12B0736908E0C123 /* Pods_SwiftFakeTests.framework */; };
 		5D4588C16188DDB38352064A /* Pods_SwiftFake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035732070BF96A8096EAD115 /* Pods_SwiftFake.framework */; };
 		F96DA4932CB4EEE5008FB892 /* FFmpegHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */; };
+		F96DA4992CB5D030008FB892 /* RTVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DA4982CB5D030008FB892 /* RTVCViewModel.swift */; };
+		F96DA49B2CB5D041008FB892 /* RTVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96DA49A2CB5D041008FB892 /* RTVCView.swift */; };
 		F9CB01EC2CADA7F9000D2D6E /* SwiftFakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB01EB2CADA7F9000D2D6E /* SwiftFakeApp.swift */; };
 		F9CB01EE2CADA7F9000D2D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB01ED2CADA7F9000D2D6E /* ContentView.swift */; };
 		F9CB01F02CADA7FA000D2D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CB01EF2CADA7FA000D2D6E /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFmpegHelper.m; sourceTree = "<group>"; };
 		F96DA4962CB4F4B4008FB892 /* SwiftFake-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftFake-Bridging-Header.h"; sourceTree = "<group>"; };
 		F96DA4972CB4F545008FB892 /* FFmpegHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFmpegHelper.h; sourceTree = "<group>"; };
+		F96DA4982CB5D030008FB892 /* RTVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTVCViewModel.swift; sourceTree = "<group>"; };
+		F96DA49A2CB5D041008FB892 /* RTVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTVCView.swift; sourceTree = "<group>"; };
 		F98D3EE12CB4627B008FA11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9CB01E82CADA7F9000D2D6E /* SwiftFake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CB01EB2CADA7F9000D2D6E /* SwiftFakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFakeApp.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				F96DA4922CB4EEE5008FB892 /* FFmpegHelper.m */,
 				F96DA4962CB4F4B4008FB892 /* SwiftFake-Bridging-Header.h */,
 				F96DA4972CB4F545008FB892 /* FFmpegHelper.h */,
+				F96DA4982CB5D030008FB892 /* RTVCViewModel.swift */,
+				F96DA49A2CB5D041008FB892 /* RTVCView.swift */,
 			);
 			path = SwiftFake;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9CB021A2CADC48A000D2D6E /* RecorderViewModel.swift in Sources */,
+				F96DA4992CB5D030008FB892 /* RTVCViewModel.swift in Sources */,
 				F9CB021E2CAF1C7B000D2D6E /* ConverterViewModel.swift in Sources */,
 				F9CB02162CADC127000D2D6E /* RecorderView.swift in Sources */,
 				F9CB02202CAF1C85000D2D6E /* ConverterView.swift in Sources */,
@@ -457,6 +464,7 @@
 				F9CB022D2CAF276F000D2D6E /* RTVC.mlpackage in Sources */,
 				F96DA4932CB4EEE5008FB892 /* FFmpegHelper.m in Sources */,
 				F9CB01EC2CADA7F9000D2D6E /* SwiftFakeApp.swift in Sources */,
+				F96DA49B2CB5D041008FB892 /* RTVCView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

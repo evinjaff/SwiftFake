@@ -49,6 +49,12 @@ struct ConverterView: View {
             
         }
         
+        Button("Get encoder output") {
+            
+            model.runModelOnOutput(pathOfWav: selectedRecording.directory)
+            
+        }
+        
         
         
         

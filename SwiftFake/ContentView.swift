@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @State private var showingRecoridng = false
     @State private var showingConverter = false
+    @State private var showingRTVC = false
     
     var body: some View {
         VStack {
@@ -34,6 +35,13 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingConverter) {
           ConverterView()
+        }
+        
+        Button("Show RTVC Modal") {
+            showingRTVC.toggle()
+        }
+        .sheet(isPresented: $showingRTVC) {
+            RTVCView()
         }
         
         

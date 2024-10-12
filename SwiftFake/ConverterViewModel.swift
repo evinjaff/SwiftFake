@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+import CoreML
+import RosaKit
+import AVFAudio
 
 // Filesystem traversal extensions
 extension URL {
@@ -91,9 +93,78 @@ class ConverterViewModel {
         
     }
     
+    func runModelOnOutput(pathOfWav: URL) {
+        
+        let rmh = RTVCModelHandler()
+        
+        rmh.preProcessInput(wavFile: pathOfWav)
+
+        
+        
+    }
+    
 
     
 }
+
+
+// Assuming your CoreML model is named "RTVC"
+class RTVCModelHandler {
+
+    init() {
+
+    }
+    
+    func preProcessInput(wavFile: URL) {
+        
+        var wfm = WavFileManager()
+        // read wav file
+        
+        var wavFileComplete = URL(filePath: wavFile.path() + "output_audio.wav")
+        
+        do {
+            print("reading audio from \(wavFile)")
+            
+            let data = try Data.init(contentsOf: wavFileComplete)
+            
+            let chunkSize = 66000
+            let chunkOfSamples = data.float32Array
+            
+            let chunkOfDoubleSamples = chunkOfSamples.map {Double($0) ?? 0}
+            
+            let spectrogram = chunkOfDoubleSamples.stft()
+            
+            print(spectrogram)
+            
+            
+            
+        }
+        catch {
+            print("Error info: \(error)")
+            print("Error reading wav file")
+        }
+        
+    }
+
+
+    
+
+
+    // Function to make predictions with the model
+    func predict(input: MLMultiArray) -> MLMultiArray? {
+        do {
+            // Create an instance of the input to pass to the model
+            let modelInput = RTVCInput(utterances: input)
+
+            // Return the output of the prediction
+            return nil
+        } catch {
+            print("Error during prediction: \(error)")
+            return nil
+        }
+    }
+}
+
 
 
 struct AudioRecording: Identifiable, Hashable {

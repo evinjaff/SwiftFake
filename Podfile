@@ -7,6 +7,7 @@ target 'SwiftFake' do
 
   # Pods for SwiftFake
   pod 'ffmpeg-kit-ios-full', '~> 6.0'
+  pod 'RosaKit'
 
   target 'SwiftFakeTests' do
     inherit! :search_paths
