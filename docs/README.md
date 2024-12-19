@@ -7,7 +7,11 @@ This site is the page for all information and updates about my Master's Capstone
 
 Our lab previously won the FTC Voice Cloning Challenge award for the paper [AntiFake](https://github.com/WUSTL-CSPL/AntiFake?tab=readme-ov-file), which focused on preventing a user's voice recording from being deepfaked by training perturbations optimized against the loss functions of popular voice deepfake encoders like RTVC. Due to this paper, our lab consulted with The White House in 2024 about how to prevent the spread of deepfakes. While this existing work was promising, it lacked scalability in the mobile domain- requiring an Nvidia GPU with at least 8 GB of VRAM, took a lot of time to run, and needed a complete audio clip to train effective perturbations. 
 
-SwiftFake started as an engineering project to defend a user's voice from being deepfaked in real-time. I identified a gap in literature where there had been a significant lack of engineering work exploring performance, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone and lacked scalability. I started by porting encoders to work with CoreML in iOS and building a hook to record a user's audio and pass it through the encoder so we could use a trained model to inject perturbations. My PI ended up disagreeing with the threat model of real-time voice cloning, and we agreed to move into the area of spam robocalling instead.
+SwiftFake started as an engineering project to defend a user's voice from being deepfaked in real-time. I identified a gap in literature where there had been a significant lack of engineering work exploring performance, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone and lacked scalability. I started by porting encoders to work with CoreML in iOS and building a hook to record a user's audio and pass it through the encoder so we could use a trained model to inject perturbations.
+
+After some discussion internally about how realistic the threat model for this scenario was, I pivoted the project to focus more on the real-time defense against AI-generated robocalls rather than focusing on the defense of a user's voice against being cloned.
+
+
 
 ## Motivation and Background
 
