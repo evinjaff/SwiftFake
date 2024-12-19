@@ -1,0 +1,71 @@
+# Use Ubuntu 24.04 as the base image
+FROM selenium/standalone-chrome
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+
+# install google chrome
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+RUN apt-get -y update
+RUN apt-get install -y google-chrome-stable
+
+# install chromedriver
+RUN apt-get install -yqq unzip
+RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
+RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
+
+# set display port to avoid crash
+ENV DISPLAY=:99
+
+# install selenium
+RUN pip install selenium==3.8.0
+
+
+
+# # Update and install necessary dependencies
+# RUN apt-get update && apt-get install -y \
+#     python3 \
+#     python3-pip \
+#     pulseaudio \
+#     libpulse-dev \
+#     wget \
+#     gnupg \
+#     && rm -rf /var/lib/apt/lists/*
+
+# # Install Firefox and Geckodriver
+# RUN apt-get update && apt-get install -y \
+#     firefox-esr \
+#     && wget -q "https://github.com/mozilla/geckodriver/releases/latest/download/geckodriver-v0.33.0-linux64.tar.gz" -O geckodriver.tar.gz \
+#     && tar -xvzf geckodriver.tar.gz -C /usr/local/bin/ \
+#     && rm geckodriver.tar.gz
+
+# # Install Selenium
+# RUN pip3 install --no-cache-dir selenium
+
+# # Create a user to run the PulseAudio server
+# RUN useradd -m dockeruser
+# USER dockeruser
+
+# # Set up PulseAudio
+# RUN mkdir -p /home/dockeruser/.config/pulse && \
+#     echo "autospawn = yes" > /home/dockeruser/.config/pulse/client.conf && \
+#     echo "default-server = unix:/run/user/1000/pulse/native" >> /home/dockeruser/.config/pulse/client.conf
+
+# # Set working directory
+# WORKDIR /app
+
+# # Copy requirements file and install additional Python dependencies
+# COPY requirements.txt /app/
+# RUN pip3 install --no-cache-dir -r requirements.txt
+
+# # Copy Python script into the container
+# COPY *.py /app/
+# COPY temp.mp3 /app/
+# COPY temp.wav /app/
+
+# # Expose ports (if needed for your Python app)
+# EXPOSE 5000
+
+# # Run the Python script
+# CMD ["python3", "your_script.py"]

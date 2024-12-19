@@ -1,0 +1,5 @@
+﻿,Hard Block,Hard Allow,Soft Block,Soft Allow,Ambiguous
+M_llama_3.8,41,0,0,0,6
+M_llama_3.8_aid,40,0,0,1,6
+C_llama_3.8,40,0,0,0,7
+C_llama_3.8_aid,28,0,2,2,15
