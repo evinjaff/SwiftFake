@@ -1,35 +1,49 @@
-# SwiftFake: Real-time Defense against Adversarial Voice Clones
+# SwiftFake: Real-time Defense against Spam Robocalling
 
 This site is the page for all information and updates about my Master's Capstone SwiftFake, which aims to build a real-time defense against robocall attacks that utilize Adversarial Cloning or "Deepfakes".
 
 
-## Gap in Literature
+## History
 
-Through a search of academic literature, I identified that local real-time deepfake audio detection was a missing area of study in academia, with many papers requiring a PC or offloading compute to a server. There has been a significant lack of engineering work exploring performance, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone and lacked scalability.
+Our lab previously won the FTC Voice Cloning Challenge award for the paper [AntiFake](https://github.com/WUSTL-CSPL/AntiFake?tab=readme-ov-file), which focused on preventing a user's voice recording from being deepfaked by training perturbations optimized against the loss functions of popular voice deepfake encoders like RTVC. Due to this paper, our lab consulted with The White House in 2024 about how to prevent the spread of deepfakes. While this existing work was promising, it lacked scalability in the mobile domain- requiring an Nvidia GPU with at least 8 GB of VRAM, took a lot of time to run, and needed a complete audio clip to train effective perturbations. 
 
-## Existing Work by Lab
+SwiftFake started as an engineering project to defend a user's voice from being deepfaked in real-time. I identified a gap in literature where there had been a significant lack of engineering work exploring performance, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone and lacked scalability. I started by porting encoders to work with CoreML in iOS and building a hook to record a user's audio and pass it through the encoder so we could use a trained model to inject perturbations. My PI ended up disagreeing with the threat model of real-time voice cloning, and we agreed to move into the area of spam robocalling instead.
 
-Our lab had previously won the FTC Voice Cloning Challenge award for the paper [AntiFake](https://github.com/WUSTL-CSPL/AntiFake?tab=readme-ov-file), which focused on preventing a user's voice recording from being deepfaked by training perturbations optimized against the loss functions of popular voice deepfake encoders like RTVC. Due to this paper, our lab also consulted with The White House this year about how to prevent the spread of deepfakes related to the 2024 election. While this existing work was promising, it lacked scalability in the mobile domain- requiring an Nvidia GPU with at least 8 GB of VRAM, took a lot of time to run, and needed a complete audio clip to train effective perturbations.
+## Motivation and Background
+
+Spam robocalling remains a prominent threat, with YouMail reported that Americans received 4.7 billion spam calls in November 2024 alone, and 1 in 5 Americans reporting losing money to spam calls. The failures of network defense mechanisms like the SHAKEN/STIR protocol against spam means that an ideal defense must happen at the spam call itself. 
+
+## System Design
+
+We design an LLM-based system utilizing an on-device Language model that can pick up a phone call and screen it for up to 40 seconds. In this time, it can talk to the other party to ask questions, it can call into memory to retrieve facts. A decision summarization engine govern's the model's execution and will execute the model's verdict to block or allow a call. If a decision isn't reached soon enough, it will summarize the model's reasoning. A block diagram is shown below
+
+<img src="img/SwiftFake_Block.png">
+
+In early experiments, we identified a high false positive rate of calls being screened, an issue mirrored across other spam filtering systems. We resolve this system by creating secure memory, a way for the model to access sensitive context without exposing the information to the other caller.
+
+## Resources and Media
+
+<a href="support/SwiftFake_MS_Presentation.pdf">Master's Defense Slides</a>
+
+<a href="support/SwiftFake_Report.pdf">Master's Project Report</a>
+
+I defended my Master's project SwiftFake on December 13th, 2024. I unfortunately did not make a recording of the defense, but the slides are here.
+
+There are currently plans for the project to be continued and submitted to USENIX 2025, and I will update this section as anything progresses.
+
+## Acknowledgements and Thanks
+
+### People:
+- Dr. Ning Zhang, PI
+- Collaborators: Ching-Hsiang Chan, Yuanahar Chang
+- Project Defense Reviewers (Dr. Patrick Crowley, Dr. Nathan Jacobs)
+
+### Software:
+- LLM Models: Microsoft Phi 3, Llama 3.1/3.2, Google Gemma, lucifer (jailbroken llama fork)
+- Open-Source Software: ffmpeg, ollama, SpeechRecognition, CMU Sphinx, pandas, sox
+- Datasets: TalkBank phone datasets, robocall-audio-dataset, FTC
 
 
-## Code and Algorithm
-
-Coming soon in November!
-
-## Threat Model
-
-The threat model is as follows, a user through a voice calling app is communicating with someone who has deepfaked their voice to impersonate a credible person (i.e. a relative, friend, politician, etc. ). The adversary is trying to convince the victim to perform an action by using the credibility of the deepfaked voice. Our defense is a layer that either blocks the adversary or warns the victim of that the caller is deepfaked.
-
-## FAQ
-
-### What devices can SwiftFake run on?
-
-Depending on engineering, either on iOS or Android. Currently, it is on iOS (hence the clever pun SwiftFake) but may be changed to Android depending on if there are any API issues.
-
-
-### Can I watch a talk on SwiftFake?
-
-I will be defending SwiftFake for my MS capstone on December 12th, 2024. I will stream a feed of on YouTube (pending department permission). Additionally, I will post a recording of my defense on YouTube to be watched afterwards that I will link here. I also plan to submit a paper to USENIX 2025 and may deliver a talk there.
 
 
 
