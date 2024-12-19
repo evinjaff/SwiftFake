@@ -66,3 +66,9 @@ fastlane/test_output
 SwiftFake/Ffmpeg/lib/
 
 initial_experiments/checkpoint.txt
+
+initial_experiments/Business/wav_trim/
+
+initial_experiments/Business/wav_clean/
+
+initial_experiments/Business/wav/
