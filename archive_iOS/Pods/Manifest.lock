@@ -1,0 +1,28 @@
+PODS:
+  - ffmpeg-kit-ios-full (6.0)
+  - PlainPocketFFT (0.0.9)
+  - PocketFFT (0.0.1)
+  - RosaKit (0.0.11):
+    - PlainPocketFFT (~> 0.0.9)
+    - PocketFFT (~> 0.0.1)
+
+DEPENDENCIES:
+  - ffmpeg-kit-ios-full (~> 6.0)
+  - RosaKit
+
+SPEC REPOS:
+  trunk:
+    - ffmpeg-kit-ios-full
+    - PlainPocketFFT
+    - PocketFFT
+    - RosaKit
+
+SPEC CHECKSUMS:
+  ffmpeg-kit-ios-full: 0099a769d22114dde52cdc238397941c32f75d27
+  PlainPocketFFT: 3763f37fba0737e457ed1a3b9b7bfa70c00ff213
+  PocketFFT: cdbe7ef5b7cd08520655d85d03d701b5ba35fdec
+  RosaKit: 6e28b09f5eb990148a401e0c4b4ff0c207bd6569
+
+PODFILE CHECKSUM: d3af5c6e59eb54679cfb3a8e23588f47341423a8
+
+COCOAPODS: 1.15.2
