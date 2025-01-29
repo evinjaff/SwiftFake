@@ -1,17 +1,19 @@
 # SwiftFake: Real-time Defense against Spam Robocalling
 
-This site is the page for all information and updates about my Master's Capstone SwiftFake, which aims to build a real-time defense against robocall attacks that utilize Adversarial Cloning or "Deepfakes".
+This repository stores all documentation, code, and reports related to my Master's Capstone SwiftFake, which aims to build a real-time defense against robocall attacks that utilize adversarial voice cloning or "Deepfakes".
 
 
 ## History
 
-Our lab previously won the FTC Voice Cloning Challenge award for the paper [AntiFake](https://github.com/WUSTL-CSPL/AntiFake?tab=readme-ov-file), which focused on preventing a user's voice recording from being deepfaked by training perturbations optimized against the loss functions of popular voice deepfake encoders like RTVC. Due to this paper, our lab consulted with The White House in 2024 about how to prevent the spread of deepfakes. While this existing work was promising, it lacked scalability in the mobile domain- requiring an Nvidia GPU with at least 8 GB of VRAM, took a lot of time to run, and needed a complete audio clip to train effective perturbations. 
+Our lab previously won the FTC Voice Cloning Challenge award for the paper [AntiFake](https://github.com/WUSTL-CSPL/AntiFake?tab=readme-ov-file), which focused on preventing a user's voice recording from being deepfaked by training perturbations optimized against the loss functions of popular voice deepfake encoders like RTVC. Due to this paper, our lab consulted with The White House in 2024 about how to prevent the spread of deepfakes. While this existing work was promising, it lacked scalability in the mobile domain (requiring an Nvidia GPU with at least 8 GB of VRAM), took a lot of time to run, and needed a complete audio clip to train effective defenses. 
 
-SwiftFake started as an engineering project to defend a user's voice from being deepfaked in real-time. I identified a gap in literature where there had been a significant lack of engineering work exploring performance, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone and lacked scalability. I started by porting encoders to work with CoreML in iOS and building a hook to record a user's audio and pass it through the encoder so we could use a trained model to inject perturbations.
+SwiftFake started as an engineering project extending this paper's work to embed defensive perturbations into a caller's voice in real-time. For example, a Twitch streamer could embedd perturbations into their voice as mentioned in [this PirateSoftware clip](https://youtu.be/DqeZZ8ks_SI?si=6lG7WbT0yC8xv3n2). The project started because I identified a gap in literature and engineering work exploring performance of these defenses, with most of the existing work running models on high-power GPUs that draw 15-40x the power of a smartphone. 
 
-After some discussion internally about how realistic the threat model for this scenario was, I pivoted the project to focus more on the real-time defense against AI-generated robocalls rather than focusing on the defense of a user's voice against being cloned.
+The project started by porting the encoders from AntiFake to work with Apple's CoreML libraryu for iOS, and then building an app to record a user's audio and pass it through the encoder to run the optimization algorithm (siimlar to how AntiFake's optimization algorithm works). After some discussion internally about how realistic the threat model for this scenario was, the project pivoted to focus more on the real-time defense against AI-generated robocalls rather than focusing on the defense of a user's voice against being cloned. Therefore, the focus shifted away from the original AntiFake paper to instead a study on spam protection using LLMs and secure personalization.
 
+The original idea was jotted down on the back of an IEEE paper I was reviewing at the time :)
 
+<img src="img/SwiftFake_sketch.png">
 
 ## Motivation and Background
 
@@ -23,7 +25,7 @@ We design an LLM-based system utilizing an on-device Language model that can pic
 
 <img src="img/SwiftFake_Block.png">
 
-In early experiments, we identified a high false positive rate of calls being screened, an issue mirrored across other spam filtering systems. We resolve this system by creating secure memory, a way for the model to access sensitive context without exposing the information to the other caller.
+In early experiments, we identified a high false positive rate of calls being screened, an issue mirrored across other spam filtering systems. We resolved this system by creating secure memory, a way for the model to access sensitive context without exposing the information to the other caller.
 
 ## Resources and Media
 
