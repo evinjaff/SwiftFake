@@ -1,28 +1,13 @@
-# blogs
+# LEGACY_TO_CLEAN
 
-A static site generator I built to publish blog posts written in markdown about personal projects to GitHub pages. Makes use of markdown to write posts, pandoc, and some light templating.
-
-### Requirements
-
-- A UNIX-like terminal
-- Pandoc installed as a CLI that can convert between markdown and html
-- Python 3.5 or higher (because subprocess library used)
-
-### How to Run/Deploy
-
-#### Preview rendered site
-
-If you want to preview what the site will look like when rendered, invoke python to run the rederer:
-
-``` 
-python3 render.py
-```
-
-This will render the blog and all posts in the `posts/` directory to a which will be available for preview by default in the `output/` folder. If you are hosting your blog not using <a href="https://pages.github.com/">GitHub pages</a>, you can serve the `output/` folder on as your blog. If you need to edit any parameters, `config.py`
+This folder contains a backup of all of the code. It is not very organized, because I was still writing a lot of the code days before my defense (as Master's students typically do). I also had to give my MacBook back to the University a few days after the defense, so I bulk comitted my entire folder in case I missed anything when doing my dump.
 
 
-#### Publish to GitHub Pages
+I am planning to eventually clean up this folder for better organization, but for now, I will quickly annotate what is in each of the folders to give a slightly better idea of each one.
 
-~~Run publish.sh from the command line and it will be responsible for rendering, committing, and pushing to the appropriate branches.~~
+- LLMExperiments: All of the code that tests the secret space mechanism.
+- audiottsserver: Webserver by Ching-Hsiang to run a real-time calling server via WebRTC. It was kind of working, but had to be scrapped for time
+- offline: largely tinkering
+- offline_compare: evaluation of the models against testing spam calls
 
-GitHub pages publishing is now completely automated. You will need to tweak some of the lines in `.github/workflows/main.yml` to adjust for your own github, but once this is done any push to the master branch will run a GitHub action to publish your draft post. **Do NOT commit the output/ folder to main, just commit the updated posts/ folder since the GitHub Actions VM will render the blog for you.** For the convenience of the user, I've included the `output/` folder in the gitignore so this doesn't happen but sometimes git is stubborn.
+All of the other files and folders are either smaller scratch experimetns or individual scripts that have their name clearly labeled
